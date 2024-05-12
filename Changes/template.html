@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ timestamp }}</title>
+</head>
+<body style="font-family:verdana">
+    <h2>Changes Recorded: {{ timestamp }}</h2>
+    
+    {% for change in changes %}
+    <div class="change">
+        <div style="color: rgb(133, 0, 0);">
+            <h3>OLD</h3>
+            <p>{{ change[0][1] }}</p>
+        </div>
+    
+        <div style="color: rgb(0, 66, 0);">
+            <h3>NEW</h3>
+            <p>{{ change[1][1] }}</p>
+        </div>
+    </div>
+    <hr>
+    {% endfor %}
+
+    <style>
+        .change {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 10px 0;
+        }
+    </style>
+</body>
+</html>

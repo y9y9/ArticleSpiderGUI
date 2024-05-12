@@ -1,0 +1,6 @@
+diff-match-patch
+bs4
+requests
+flask
+flask-wtf
+selenium
